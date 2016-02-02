@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09DB3E5A-ADAD-4DF4-B611-B78D4CA00AF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdvancedGraph</RootNamespace>
+    <AssemblyName>AdvancedGraph</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayHelper.cs" />
+    <Compile Include="Exceptions\UnknownSetType.cs" />
+    <Compile Include="Exceptions\UnknownGraphType.cs" />
+    <Compile Include="Exceptions\UnknownEdgeType.cs" />
+    <Compile Include="Factories\EdgeSetFactory.cs" />
+    <Compile Include="GraphContracts.cs" />
+    <Compile Include="Enums\GraphTypes.cs" />
+    <Compile Include="Implementations\BaseEdge.cs" />
+    <Compile Include="Implementations\BaseEdgeId.cs" />
+    <Compile Include="Implementations\BaseVertex.cs" />
+    <Compile Include="Implementations\BaseVertexId.cs" />
+    <Compile Include="Implementations\DirectedEdge.cs" />
+    <Compile Include="Implementations\Graphs\Graph.cs" />
+    <Compile Include="Interfaces\IDirectedGraph.cs" />
+    <Compile Include="Interfaces\IGraph.cs" />
+    <Compile Include="Interfaces\IVertexManager.cs" />
+    <Compile Include="Managers\DirectedEdgeManager.cs" />
+    <Compile Include="Enums\EdgeTypes.cs" />
+    <Compile Include="Factories\VertexManagerFactory.cs" />
+    <Compile Include="Factories\VertexFactory.cs" />
+    <Compile Include="Factories\EdgeFactory.cs" />
+    <Compile Include="Implementations\Sets\BaseArraySet.cs" />
+    <Compile Include="Implementations\Sets\BaseListSet.cs" />
+    <Compile Include="Implementations\Sets\KeyPersonalizator.cs" />
+    <Compile Include="Implementations\Sets\TypedSet.cs" />
+    <Compile Include="Managers\BaseEdgeManager.cs" />
+    <Compile Include="Interfaces\IEdgeManager.cs" />
+    <Compile Include="Factories\EdgeManagerFactory.cs" />
+    <Compile Include="Interfaces\ITypedSet.cs" />
+    <Compile Include="Exceptions\UnknownVertexType.cs" />
+    <Compile Include="Managers\BaseVertexManager.cs" />
+    <Compile Include="Enums\VertexTypes.cs" />
+    <Compile Include="Enums\SetTypes.cs" />
+    <Compile Include="Interfaces\IDirectedEdge.cs" />
+    <Compile Include="Interfaces\IEdge.cs" />
+    <Compile Include="Interfaces\IEdgeId.cs" />
+    <Compile Include="Interfaces\IVertex.cs" />
+    <Compile Include="Interfaces\IVertexId.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
