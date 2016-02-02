@@ -1,1 +1,1 @@
-# AdvancedGraph ЭТО ГРАФ СУКИ
+# AdvancedGraph ЭТО ГРАФ
